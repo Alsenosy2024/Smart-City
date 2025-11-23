@@ -1,11 +1,15 @@
-<div align="center">
+# لوحة التشارطات للـ Super Agent
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+واجهة خفيفة لإعادة بناء التشارطات بحيث تدعم:
 
-  <h1>Built with AI Studio</h2>
+- **توليد مباشر** للتشارطات البسيطة دون انتظار.
+- **محاكاة/تنبؤ** مع خطوة معالجة مرئية قبل عرض النتائج.
+- ألوان عالية التباين لتمييز القياسات المباشرة عن النتائج المتوقعة.
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## التشغيل
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+لا حاجة لبناء محلي؛ افتح الملف `index.html` مباشرة في المتصفح وسيتم تحميل Chart.js من الـ CDN.
 
-</div>
+1. اختر عدد النقاط من شريط التمرير.
+2. اضغط **توليد مباشر** لإنشاء تشارطة فورية.
+3. اضغط **محاكاة / تنبؤ** لإظهار خطوة المعالجة ثم عرض الخط المتنبأ به بخط متقطع ولون مميز.

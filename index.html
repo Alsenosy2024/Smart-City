@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>لوحة التشارطات</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="page-header">
+    <div>
+      <p class="eyebrow">Super Agent</p>
+      <h1>إعادة بناء التشارطات</h1>
+      <p class="subhead">توليد مباشر أو عبر محاكاة/تنبؤ مع معالجة واضحة وألوان مقروءة.</p>
+    </div>
+    <div class="status" id="status" aria-live="polite"></div>
+  </header>
+
+  <main class="layout">
+    <section class="panel">
+      <h2>إعدادات التوليد</h2>
+      <div class="control-group">
+        <label class="field-label" for="pointCount">عدد النقاط</label>
+        <input type="range" id="pointCount" min="4" max="12" value="8" aria-describedby="pointCountHelp" />
+        <div class="help" id="pointCountHelp">تحكم في حجم البيانات قبل إنشاء التشارط.</div>
+      </div>
+
+      <div class="mode-selector" role="group" aria-label="طرق التوليد">
+        <button class="mode-button" data-mode="direct">توليد مباشر</button>
+        <button class="mode-button" data-mode="simulation">محاكاة / تنبؤ</button>
+      </div>
+
+      <div class="legend">
+        <span class="legend-color" style="background:#1f77b4"></span>
+        <span>قياسات مباشرة</span>
+        <span class="legend-color" style="background:#ff7f0e"></span>
+        <span>نتائج معالجة/تنبؤ</span>
+      </div>
+    </section>
+
+    <section class="panel chart-panel">
+      <div class="chart-header">
+        <div>
+          <p class="eyebrow">التشارطة</p>
+          <h2 id="chartTitle">أداء مباشر</h2>
+        </div>
+        <div class="processing" id="processing" aria-live="assertive" hidden>
+          <span class="spinner" aria-hidden="true"></span>
+          <span>جارٍ المعالجة المتقدمة...</span>
+        </div>
+      </div>
+      <canvas id="chart" aria-describedby="chartDescription"></canvas>
+      <p class="help" id="chartDescription">يتم تحديث التشارطة بحسب الطريقة المختارة مع إبراز الفوارق اللونية لضمان وضوح القراءة.</p>
+    </section>
+  </main>
+</body>
+</html>
