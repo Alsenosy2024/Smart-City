@@ -1,0 +1,7 @@
+{
+  "name": "VizAgent - AI Chart Generator new",
+  "description": "A super-agent interface that converts natural language queries into beautiful, interactive data visualizations instantly.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
